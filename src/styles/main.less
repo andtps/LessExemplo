@@ -1,0 +1,69 @@
+@import "reset.less";
+@import "variaveis.less";
+
+@BreakPointMobile: ~"(max-width:320px)";
+
+header {
+  background-color: @HeaderColor;
+  .container {
+    max-width: 980px;
+    height: 110px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu {
+      display: flex;
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        font-size: larger;
+        color: #color(TextColor);
+        padding: 10px;
+      }
+    }
+  }
+}
+
+section {
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    h2 {
+      margin-top: 30px;
+    }
+
+    @media @BreakPointMobile {
+      background-color: red;
+      display: block;
+    }
+    .products {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 30% 30% 30%;
+      gap: 2%;
+      li {
+        list-style: none;
+      }
+      img {
+        width: 300px;
+        border-radius: 20px;
+      }
+      .product-button {
+        display: block;
+        background-color: #color(buttonColor);
+        color: #color(TextColor);
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+        &:hover {
+          background-color: #color(HoverButton);
+        }
+      }
+    }
+  }
+}
